@@ -14,6 +14,7 @@
 		025429E61D21516600F9A94B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 025429E41D21516600F9A94B /* LaunchScreen.storyboard */; };
 		025429F11D21516600F9A94B /* HolidayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025429F01D21516600F9A94B /* HolidayTests.swift */; };
 		025429FC1D21516600F9A94B /* HolidayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025429FB1D21516600F9A94B /* HolidayUITests.swift */; };
+		02B12F641D21781A005A0C19 /* Holiday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B12F631D21781A005A0C19 /* Holiday.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		025429F71D21516600F9A94B /* HolidayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HolidayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		025429FB1D21516600F9A94B /* HolidayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayUITests.swift; sourceTree = "<group>"; };
 		025429FD1D21516600F9A94B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02B12F631D21781A005A0C19 /* Holiday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				025429DB1D21516600F9A94B /* AppDelegate.swift */,
 				025429DD1D21516600F9A94B /* ViewController.swift */,
 				025429DF1D21516600F9A94B /* Main.storyboard */,
+				02B12F631D21781A005A0C19 /* Holiday.swift */,
 				025429E21D21516600F9A94B /* Assets.xcassets */,
 				025429E41D21516600F9A94B /* LaunchScreen.storyboard */,
 				025429E71D21516600F9A94B /* Info.plist */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B12F641D21781A005A0C19 /* Holiday.swift in Sources */,
 				025429DE1D21516600F9A94B /* ViewController.swift in Sources */,
 				025429DC1D21516600F9A94B /* AppDelegate.swift in Sources */,
 			);
@@ -485,6 +489,7 @@
 				02542A021D21516600F9A94B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		02542A031D21516600F9A94B /* Build configuration list for PBXNativeTarget "HolidayTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +498,7 @@
 				02542A051D21516600F9A94B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		02542A061D21516600F9A94B /* Build configuration list for PBXNativeTarget "HolidayUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +507,7 @@
 				02542A081D21516600F9A94B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

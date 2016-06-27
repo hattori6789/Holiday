@@ -1,25 +1,87 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Holiday" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x2u-La-STj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYo-zg-bB7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="次の祝日は" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wC5-4s-nhS">
+                                        <rect key="frame" x="133" y="284" width="110" height="25"/>
+                                        <fontDescription key="fontDescription" name="GillSans-LightItalic" family="Gill Sans" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000年00月00日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5w4-JR-6RW">
+                                        <rect key="frame" x="94" y="319" width="187" height="30"/>
+                                        <fontDescription key="fontDescription" name="GillSans-LightItalic" family="Gill Sans" pointSize="26"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〇〇の日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fu2-id-xMv">
+                                        <rect key="frame" x="124" y="359" width="128" height="37"/>
+                                        <fontDescription key="fontDescription" name="GillSans-LightItalic" family="Gill Sans" pointSize="32"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="5w4-JR-6RW" firstAttribute="centerY" secondItem="DYo-zg-bB7" secondAttribute="centerY" id="0TT-1q-vU1"/>
+                                    <constraint firstItem="5w4-JR-6RW" firstAttribute="centerX" secondItem="DYo-zg-bB7" secondAttribute="centerX" id="0py-7j-Csv"/>
+                                    <constraint firstItem="wC5-4s-nhS" firstAttribute="centerX" secondItem="DYo-zg-bB7" secondAttribute="centerX" id="GfU-fr-hAt"/>
+                                    <constraint firstItem="Fu2-id-xMv" firstAttribute="top" secondItem="5w4-JR-6RW" secondAttribute="bottom" constant="10" id="Ufs-U8-BMA"/>
+                                    <constraint firstItem="Fu2-id-xMv" firstAttribute="centerX" secondItem="DYo-zg-bB7" secondAttribute="centerX" id="yDR-Ih-nte"/>
+                                    <constraint firstItem="5w4-JR-6RW" firstAttribute="top" secondItem="wC5-4s-nhS" secondAttribute="bottom" constant="10" id="zvM-Na-GmF"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcu-5X-cGg">
+                                <rect key="frame" x="7" y="0.0" width="361" height="667"/>
+                                <connections>
+                                    <action selector="appearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="98y-AF-y9o"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DYo-zg-bB7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2NC-dc-OnO"/>
+                            <constraint firstItem="x2u-La-STj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5x4-oM-J62"/>
+                            <constraint firstItem="x2u-La-STj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="S60-jW-3yb"/>
+                            <constraint firstAttribute="trailing" secondItem="x2u-La-STj" secondAttribute="trailing" id="TGm-vC-u8V"/>
+                            <constraint firstItem="DYo-zg-bB7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iVB-Eh-iRx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="x2u-La-STj" secondAttribute="bottom" id="jDz-X2-Uuj"/>
+                            <constraint firstAttribute="trailing" secondItem="DYo-zg-bB7" secondAttribute="trailing" id="jO9-jf-hnX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DYo-zg-bB7" secondAttribute="bottom" id="pIG-Bn-eRJ"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="x2u-La-STj" id="gWO-Ub-HRY"/>
+                        <outlet property="dateLabel" destination="5w4-JR-6RW" id="7xQ-QF-D9k"/>
+                        <outlet property="labelContainerView" destination="DYo-zg-bB7" id="jWD-zg-u95"/>
+                        <outlet property="nextHolidayLabel" destination="Fu2-id-xMv" id="CA6-ea-FPP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="324.5" y="387.5"/>
         </scene>
     </scenes>
 </document>
