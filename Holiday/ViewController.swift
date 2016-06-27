@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // hamuhamu
+        // second commit
     }
 
     override func didReceiveMemoryWarning() {
