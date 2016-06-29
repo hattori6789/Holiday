@@ -30,14 +30,14 @@ class Holiday {
         "2016年12月23日":"天皇誕生日"
     ]
     
-    func sortedStrArr(strDic: Dictionary<String, String>) -> Array<String> {
+    func getStrArr(strDic: Dictionary<String, String>) -> Array<String> {
         
         var arr: [String] = []
         for (key, _) in strDic {
             arr.append(key)
         }
         
-        return arr.sort()
+        return arr
         
     }
 }

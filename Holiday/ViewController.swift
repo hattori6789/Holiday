@@ -10,12 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var nextHolidayLabel: UILabel!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var labelContainerView: UIView!
-
     
     let holidays = Holiday()
     
@@ -23,20 +21,28 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let formatter = NSDateFormatter()
-        formatter.dateFormat = "2016年05月05日"
+        formatter.dateFormat = "2016年05月04日"
         let currentDate = formatter.stringFromDate(NSDate())
-        let holidaysArr = holidays.sortedStrArr(holidays.dictionary)
+        let holidayArr = holidays.getStrArr(holidays.dictionary)
         
-        for holiday in holidaysArr {
+        for holiday in holidayArr.sort() {
+            
             if currentDate < holiday {
                 setDisplay(holidays.dictionary, keyDate: holiday)
                 break
             }
+            
         }
+        
     }
     
     override func viewDidAppear(animated: Bool) {
-        labelContainerView.hidden = true
+        
+        labelContainerView.alpha = 0.0
+        labelContainerView.fadeIn(0.7, delay: 1.0) { (finished) in
+            self.labelContainerView.fadeOut(0.35, delay: 2.7, completion: nil)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,12 +62,52 @@ class ViewController: UIViewController {
     }
 
     @IBAction func appearButtonTapped(sender: AnyObject) {
-        print("button tapped")
-        if labelContainerView.hidden == true {
-           labelContainerView.hidden = false
+        
+        if labelContainerView.alpha == 0.0 {
+           labelContainerView.fadeIn(0.7, delay: 0, completion: { (finished) in
+            self.labelContainerView.fadeOut(0.35, delay: 3.0, completion: nil)
+           })
         }
+        
     }
-
-
+    
 }
 
+
+
+extension UIView {
+    
+    func fadeOut(duration: NSTimeInterval, delay: NSTimeInterval, completion: ((finished: Bool) -> Void)?) {
+        UIView.animateWithDuration(
+            duration,
+            delay: delay,
+            options: UIViewAnimationOptions.CurveEaseIn,
+            animations: {
+                self.alpha = 0.0
+            },
+            completion: completion)
+    }
+    
+    func fadeIn(duration: NSTimeInterval, delay: NSTimeInterval, completion: ((finished: Bool)->Void)?) {
+        UIView.animateWithDuration(
+            duration,
+            delay: delay,
+            options:UIViewAnimationOptions.CurveEaseIn,
+            animations: {
+                self.alpha = 1.0
+            },
+            completion: completion)
+    }
+    
+    func fadeInOut(duration: NSTimeInterval, delay: NSTimeInterval, completion: ((finished: Bool) -> Void)?) {
+        UIView.animateWithDuration(
+            duration,
+            delay: delay,
+            options: UIViewAnimationOptions.CurveEaseInOut,
+            animations: {
+                self.alpha = 1.0
+            },
+            completion: completion)
+    }
+    
+}
