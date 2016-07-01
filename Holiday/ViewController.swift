@@ -39,8 +39,8 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         
         labelContainerView.alpha = 0.0
-        labelContainerView.fadeIn(0.7, delay: 1.0) { (finished) in
-            self.labelContainerView.fadeOut(0.35, delay: 2.7, completion: nil)
+        labelContainerView.fadeIn(0.6, delay: 1.0) { (finished) in
+            self.labelContainerView.fadeOut(0.3, delay: 2.3, completion: nil)
         }
         
     }
@@ -64,8 +64,8 @@ class ViewController: UIViewController {
     @IBAction func appearButtonTapped(sender: AnyObject) {
         
         if labelContainerView.alpha == 0.0 {
-           labelContainerView.fadeIn(0.7, delay: 0, completion: { (finished) in
-            self.labelContainerView.fadeOut(0.35, delay: 3.0, completion: nil)
+           labelContainerView.fadeIn(0.6, delay: 0, completion: { (finished) in
+            self.labelContainerView.fadeOut(0.3, delay: 1.8, completion: nil)
            })
         }
         
