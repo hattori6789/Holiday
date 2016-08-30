@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let formatter = NSDateFormatter()
-        formatter.dateFormat = "2016年05月04日"
+        formatter.dateFormat = "yyyy年MM月dd日"
         let currentDate = formatter.stringFromDate(NSDate())
         let holidayArr = holidays.getStrArr(holidays.dictionary)
         
@@ -49,28 +49,28 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     func setDisplay(holidayDic: Dictionary<String, String>, keyDate: String) {
-        
+
         dateLabel.text = "\(keyDate)"
-        
+
         if let keydate = holidayDic[keyDate] {
             nextHolidayLabel.text = "\(keydate)"
             backgroundImageView.image = UIImage(named: "\(keydate)")
-            
+
         }
     }
 
     @IBAction func appearButtonTapped(sender: AnyObject) {
         
         if labelContainerView.alpha == 0.0 {
-           labelContainerView.fadeIn(0.6, delay: 0, completion: { (finished) in
-            self.labelContainerView.fadeOut(0.3, delay: 1.8, completion: nil)
-           })
+            labelContainerView.fadeIn(0.6, delay: 0, completion: { (finished) in
+                self.labelContainerView.fadeOut(0.3, delay: 1.8, completion: nil)
+            })
         }
         
     }
-    
+
 }
 
 
