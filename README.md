@@ -1,7 +1,7 @@
 ## About Holiday App
 祝日が待ち遠しい気持ちを画像で癒すアプリ（猫バージョン）
 ## Special Thanks
-Thanks awesome photographers!!
+### Thanks awesome photographers!!
 * 元日 : photo by [hsohei](https://www.flickr.com/photos/sohei_flickr/4232685408)
 * 成人の日 : photo by [Big Ben in Japan](https://www.flickr.com/photos/gaijinbiker/21972319200)
 * 建国記念の日 : photo by [neko-yanagi](https://www.flickr.com/photos/nekoyanagi/14028105285)
